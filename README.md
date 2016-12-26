@@ -10,7 +10,7 @@ springboot + thymeleaf + angular2 + bootstrap
 git clone --depth 1 https://github.com/1102568869/blog.git
 
 # change directory to angular2
-cd angular2-webpack
+cd blog/angular2-webpack
 
 # install the repo with npm
 npm install
