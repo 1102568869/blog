@@ -1,0 +1,12 @@
+# Created by .ignore support plugin (hsz.mobi)
+*.iml
+*.log
+
+.idea/
+target/
+
+angular2-webpack/node_modules/
+src/main/resources/pages/
+
+angular/
+angular2-webpack-starter-master/

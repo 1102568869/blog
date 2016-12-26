@@ -1,0 +1,162 @@
+<div class="container">
+    <div class="row clearfix">
+        <div class="col-md-12 column">
+            <div class="page-header">
+                <h1>
+                    洗澡狂魔的技术阵地
+                    <small>－－钱多话少死的早</small>
+                </h1>
+
+                <ul class="nav nav-pills" role="navigation">
+                    <li [class.active]="current_path.indexOf('/welcome') != -1 ">
+                        <a routerLink="/welcome" routerLinkActive="active">首页</a>
+                    </li>
+                    <li [class.active]="current_path.indexOf('/article') != -1 ">
+                        <a routerLink="/article">文章</a>
+                    </li>
+                    <li [class.active]="current_path.indexOf('/tag') != -1 " class="disabled">
+                        <a href="javascript:void(0);">标签</a>
+                    </li>
+                    <li [class.active]="current_path.indexOf('/comment') != -1 ">
+                        <a routerLink="/comment">留言</a>
+                    </li>
+                    <li [class.active]="current_path.indexOf('/about') != -1 ">
+                        <a routerLink="/about">关于</a>
+                    </li>
+                    <!--    <li class="disabled">
+                            <a href="#">信息</a>
+                        </li>-->
+                    <li class="dropdown pull-right">
+                        <a href="#" data-toggle="dropdown" class="dropdown-toggle">撩我<strong class="caret"></strong></a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="#">操作</a>
+                            </li>
+                            <li>
+                                <a href="#">设置栏目</a>
+                            </li>
+                            <li>
+                                <a href="#">更多设置</a>
+                            </li>
+                            <li class="divider">
+                            </li>
+                            <li>
+                                <a href="#">分割线</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+    <div class="row clearfix">
+        <div class="col-md-9 column">
+            <ul class="breadcrumb" *ngIf="current_path != '/welcome' ">
+                <li *ngFor="let path of route_navs ; let i = index;" [class.active]="i == route_navs.length-1">
+                    <a routerLink="/{{path}}" *ngIf="i < route_navs.length-1">{{path}}</a>
+                    <span *ngIf="i==route_navs.length-1">{{path}}</span>
+                </li>
+            </ul>
+            <router-outlet></router-outlet>
+        </div>
+        <div class="col-md-3 column">
+            <div class="list-group">
+                <a href="javascript:void(0);" class="list-group-item active">热门文章</a>
+                <div class="list-group-item ">
+                    <span class="badge">1235</span> 一年,又三年
+                </div>
+                <div class="list-group-item">
+                    <span class="badge">1111</span> 和XXX同居的日子
+                </div>
+                <div class="list-group-item">
+                    <span class="badge">888</span> Help me!
+                </div>
+                <div class="list-group-item" routerLink="/article/贪吃蛇大乱斗">
+                    <span class="badge">532</span> 最新力作－－贪吃蛇大乱斗!
+                </div>
+                <div class="list-group-item">
+                    <span class="badge">141</span> 荒野大嫖客
+                </div>
+                <!--
+                                <a class="list-group-item active"> <span class="badge">14</span> Help</a>
+                -->
+            </div>
+            <!--<div class="panel-group" id="panel-519019">-->
+            <!--<div class="panel panel-default">-->
+            <!--<div class="panel-heading">-->
+            <!--<a class="panel-title collapsed" data-toggle="collapse" data-parent="#panel-519019"-->
+            <!--href="#panel-element-904492">Collapsible Group Item #1</a>-->
+            <!--</div>-->
+            <!--<div id="panel-element-904492" class="panel-collapse collapse">-->
+            <!--<div class="panel-body">-->
+            <!--Anim pariatur cliche...1-->
+            <!--</div>-->
+            <!--<div class="panel-body">-->
+            <!--Anim pariatur cliche...2-->
+            <!--</div>-->
+            <!--<div class="panel-body">-->
+            <!--Anim pariatur cliche...3-->
+            <!--</div>-->
+            <!--</div>-->
+            <!--</div>-->
+            <!--<div class="panel panel-default">-->
+            <!--<div class="panel-heading">-->
+            <!--<a class="panel-title collapsed" data-toggle="collapse" data-parent="#panel-519019"-->
+            <!--href="#panel-element-369294">Collapsible Group Item #2</a>-->
+            <!--</div>-->
+            <!--<div id="panel-element-369294" class="panel-collapse collapse">-->
+            <!--<div class="panel-body">-->
+            <!--Anim pariatur cliche...-->
+            <!--</div>-->
+            <!--</div>-->
+            <!--</div>-->
+            <!--</div>-->
+            <div class="panel panel-default">
+                <div class="panel-heading ">
+                    <h3 class="panel-title ">
+                        热门标签
+                    </h3>
+                </div>
+                <div class="panel-body cloud">
+                    <ul>
+                        <li><a href="/">个人博客</a></li>
+                        <li><a href="/">web开发</a></li>
+                        <li><a href="/">前端设计</a></li>
+                        <li><a href="/">Html</a></li>
+                        <li><a href="/">CSS3</a></li>
+                        <li><a href="/">Html5+css3</a></li>
+                        <li><a href="/">百度</a></li>
+                        <li><a href="/">Javasript</a></li>
+                        <li><a href="/">web开发</a></li>
+                        <li><a href="/">前端设计</a></li>
+                        <li><a href="/">Html</a></li>
+                        <li><a href="/">CSS3</a></li>
+                        <li><a href="/">Html5+css3</a></li>
+                        <li><a href="/">百度</a></li>
+                    </ul>
+                </div>
+            </div>
+
+
+            <div class="panel panel-success text-center">
+                <div class="panel-heading ">
+                    <h3 class="panel-title ">
+                        扫码手机浏览
+                    </h3>
+                </div>
+                <div class="panel-body">
+                    此处二维码二维码<br/>
+                    此处二维码二维码<br/>
+                    此处二维码二维码<br/>
+                    此处二维码二维码<br/>
+                    此处二维码二维码<br/>
+                    此处二维码二维码<br/>
+                </div>
+                <div class="panel-footer small">
+                    这里的字显得小一点
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
