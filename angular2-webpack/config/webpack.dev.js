@@ -57,7 +57,7 @@ module.exports = function (options) {
        */
       //path: helpers.root('dist'),
       path: helpers.root('../src/main/resources/pages'),
-      publicPath: '/',
+      publicPath: '/static/',
       /**
        * Specifies the name of each output file on disk.
        * IMPORTANT: You must not specify an absolute path here!

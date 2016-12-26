@@ -33,6 +33,6 @@ module.exports = {
         // { name: 'theme-color', content: '#00bcd4' }
     ],
     script: [
-        {src: "/js/jquery/jquery.1.12.4.min.js"}
+        {src: "/static/js/jquery/jquery.1.12.4.min.js"}
     ]
 };

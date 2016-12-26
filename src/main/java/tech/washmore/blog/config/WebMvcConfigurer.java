@@ -1,7 +1,9 @@
 package tech.washmore.blog.config;
 
 import org.springframework.boot.autoconfigure.condition.ConditionalOnWebApplication;
+import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.web.servlet.HandlerInterceptor;
 import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
 import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
@@ -18,7 +20,7 @@ public class WebMvcConfigurer extends WebMvcConfigurerAdapter {
     @Override
     public void addResourceHandlers(ResourceHandlerRegistry registry) {
         //  CacheControl cacheControl = CacheControl.maxAge(15, TimeUnit.HOURS);
-        registry.addResourceHandler("/**").addResourceLocations("classpath:/pages/");
+        registry.addResourceHandler("/static/**").addResourceLocations("classpath:/pages/");
     }
 
     /**
@@ -26,9 +28,10 @@ public class WebMvcConfigurer extends WebMvcConfigurerAdapter {
      */
     @Override
     public void addInterceptors(InterceptorRegistry registry) {
-//        registry.addInterceptor(loginInterceptor()).addPathPatterns("/",
-//                "/api/ky/**").excludePathPatterns("/static/**");
+       // registry.addInterceptor(routerInterceptor()).addPathPatterns("/**").excludePathPatterns("/", "/welcome", "", "/static/**");
     }
+
+
 //
 //    /**
 //     * @return ResourceConfig

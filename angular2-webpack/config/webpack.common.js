@@ -209,7 +209,7 @@ module.exports = function (options) {
              * See: https://www.npmjs.com/package/copy-webpack-plugin
              */
             new CopyWebpackPlugin([
-                 { from: 'src/jquery', to: 'js/jquery' },
+                 { from: 'src/jquery', to: 'js/jquery' }
                 // { from: 'src/meta'}
             ]),
 
