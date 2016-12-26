@@ -18,13 +18,14 @@ const ForkCheckerPlugin = require('awesome-typescript-loader').ForkCheckerPlugin
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const LoaderOptionsPlugin = require('webpack/lib/LoaderOptionsPlugin');
 const ScriptExtHtmlWebpackPlugin = require('script-ext-html-webpack-plugin');
+const HtmlElementsPlugin = require('./html-elements-plugin');
 
 /*
  * Webpack Constants
  */
 const HMR = helpers.hasProcessFlag('hot');
 const METADATA = {
-    title: 'Angular2 Webpack Starter by @gdi2290 from @AngularClass',
+    title: 'Welcome to jBlog',
     baseUrl: '/',
     isDevServer: helpers.isWebpackDevServer()
 };
@@ -179,7 +180,7 @@ module.exports = function (options) {
              * See: https://github.com/webpack/docs/wiki/optimization#multi-page-app
              */
             new CommonsChunkPlugin({
-                name: ['polyfills', 'vendor','main'].reverse()
+                name: ['polyfills', 'vendor', 'main'].reverse()
             }),
 
             /**
@@ -207,7 +208,7 @@ module.exports = function (options) {
              * See: https://www.npmjs.com/package/copy-webpack-plugin
              */
             new CopyWebpackPlugin([
-                // { from: 'src/assets', to: 'assets' },
+                 { from: 'src/jquery', to: 'js/jquery' },
                 // { from: 'src/meta'}
             ]),
 
@@ -261,9 +262,9 @@ module.exports = function (options) {
              *
              * Dependencies: HtmlWebpackPlugin
              */
-            // new HtmlElementsPlugin({
-            //     headTags: require('./head-config.common')
-            // }),
+            new HtmlElementsPlugin({
+                headTags: require('./head-config.common')
+            }),
 
             /**
              * Plugin LoaderOptionsPlugin (experimental)
