@@ -16,9 +16,10 @@ const CommonsChunkPlugin = require('webpack/lib/optimize/CommonsChunkPlugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const ForkCheckerPlugin = require('awesome-typescript-loader').ForkCheckerPlugin;
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const HtmlElementsPlugin = require('./html-elements-plugin');
 const LoaderOptionsPlugin = require('webpack/lib/LoaderOptionsPlugin');
 const ScriptExtHtmlWebpackPlugin = require('script-ext-html-webpack-plugin');
-const HtmlElementsPlugin = require('./html-elements-plugin');
+
 
 /*
  * Webpack Constants
