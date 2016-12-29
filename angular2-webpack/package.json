@@ -79,6 +79,7 @@
     "rxjs": "5.0.0-beta.12",
     "bootstrap": "^3.3.6",
     "echarts": "3.2.3",
+    "jquery":"*",
     "zone.js": "~0.6.26"
   },
   "devDependencies": {

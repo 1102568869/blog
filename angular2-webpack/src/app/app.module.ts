@@ -10,6 +10,7 @@ import {WelcomeComponent} from "./welcome.component";
 import {AboutComponent} from "./about.component";
 import {ArticleListComponent} from "./article.list.component";
 import {ArticleDetailComponent} from "./article.detail.component";
+import {HashLocationStrategy, LocationStrategy} from "@angular/common";
 @NgModule({
     imports: [
         BrowserModule,
@@ -25,6 +26,7 @@ import {ArticleDetailComponent} from "./article.detail.component";
         ArticleListComponent,
         ArticleDetailComponent
     ],
+   // providers: [{provide: LocationStrategy, useClass: HashLocationStrategy}],
     providers: [],
     bootstrap: [AppComponent]
 })
